@@ -14,6 +14,8 @@ import com.maibaapp.sweetly.databinding.ActivitySplashBinding
 import com.permissionx.guolindev.PermissionX
 
 class SplashActivity : com.maibaapp.base.base.BaseViewBindActivity<ActivitySplashBinding>() {
+    override val dialogMsg: String
+        get() = ConstString.USER_PRIVACY_MESSAGE.format(getString(R.string.app_name))
     override val isCanShowAgreeDialog: Boolean
         get() = true
     private val permissions = mutableListOf(
