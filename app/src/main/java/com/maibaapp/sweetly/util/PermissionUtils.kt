@@ -8,7 +8,7 @@ import android.os.PowerManager
 import android.os.Process
 import android.provider.Settings
 import androidx.core.app.NotificationManagerCompat
-import com.maibaapp.sweetly.App
+import com.maibaapp.base.App
 
 
 /**

@@ -7,13 +7,13 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraph
 import androidx.navigation.fragment.NavHostFragment
 import com.maibaapp.sweetly.R
-import com.maibaapp.sweetly.base.base.BaseViewBindActivity
+import com.maibaapp.base.base.BaseViewBindActivity
 import com.maibaapp.sweetly.databinding.ActivityContainerBinding
-import com.maibaapp.sweetly.log.LogUtil
+import com.maibaapp.base.log.LogUtil
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ContainerActivity : BaseViewBindActivity<ActivityContainerBinding>() {
+class ContainerActivity : com.maibaapp.base.base.BaseViewBindActivity<ActivityContainerBinding>() {
     private var destinationFragmentId = MutableLiveData<Int>(-1)
     private lateinit var navController: NavController
     private lateinit var navHostFragment: NavHostFragment

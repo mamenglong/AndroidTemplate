@@ -3,8 +3,8 @@ package com.maibaapp.sweetly.net.api
 import com.maibaapp.sweetly.bean.RespondData
 import com.maibaapp.sweetly.manager.UserManager
 import com.maibaapp.sweetly.util.Result
-import com.maibaapp.sweetly.util.no
-import com.maibaapp.sweetly.util.yes
+import com.maibaapp.base.no
+import com.maibaapp.base.yes
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

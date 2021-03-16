@@ -1,7 +1,7 @@
 package com.maibaapp.sweetly.net.cookie
 
 
-import com.maibaapp.sweetly.log.LogUtil
+import com.maibaapp.base.log.LogUtil
 import com.tencent.mmkv.MMKV
 import okhttp3.Cookie
 import okhttp3.HttpUrl

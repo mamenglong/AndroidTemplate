@@ -1,9 +1,9 @@
 package com.maibaapp.sweetly.dragger
 
-import com.maibaapp.sweetly.App
+import com.maibaapp.base.App
 import com.maibaapp.sweetly.BuildConfig
-import com.maibaapp.sweetly.base.DataReport
-import com.maibaapp.sweetly.log.LogUtil
+import com.maibaapp.base.DataReport
+import com.maibaapp.base.log.LogUtil
 import com.maibaapp.sweetly.manager.UserManager
 import com.maibaapp.sweetly.net.api.HEADER
 import com.maibaapp.sweetly.net.api.NetworkSignParamsFactory
@@ -81,7 +81,7 @@ object NetModule {
                     "User-Agent",
                     UserManager.userAgent
                 )
-            newRequestBuilder.header("channel", DataReport.getChannel(App.application))
+            newRequestBuilder.header("channel", com.maibaapp.base.DataReport.getChannel(App.application))
             newRequestBuilder.header(HEADER.AUTHORIZATION, UserManager.authentication)
             newRequestBuilder.cacheControl(CacheControl.FORCE_NETWORK)
             newRequestBuilder.build()

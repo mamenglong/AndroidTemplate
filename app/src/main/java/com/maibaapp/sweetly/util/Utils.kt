@@ -10,8 +10,9 @@ import android.graphics.Bitmap.CompressFormat
 import android.icu.text.DateFormat
 import android.net.Uri
 import android.text.TextUtils
-import com.maibaapp.sweetly.App
+import com.maibaapp.base.App
 import com.maibaapp.sweetly.ConstString.QQ_PACKAGE_NAME
+import com.maibaapp.base.showToast
 import okhttp3.internal.and
 import org.tikteam.commons.codec.binary.Base32
 import org.tikteam.commons.codec.binary.Base64

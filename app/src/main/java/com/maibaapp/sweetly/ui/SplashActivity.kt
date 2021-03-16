@@ -8,16 +8,12 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AlertDialog
 import com.maibaapp.sweetly.ConstString
-import com.maibaapp.sweetly.EventBusKey
+import com.maibaapp.base.EventBusKey
 import com.maibaapp.sweetly.R
-import com.maibaapp.sweetly.base.base.AgreementDialogClickCallback
-import com.maibaapp.sweetly.base.base.BaseViewBindActivity
-import com.maibaapp.sweetly.base.config.MMKV
-import com.maibaapp.sweetly.base.event.EventBus
 import com.maibaapp.sweetly.databinding.ActivitySplashBinding
 import com.permissionx.guolindev.PermissionX
 
-class SplashActivity : BaseViewBindActivity<ActivitySplashBinding>() {
+class SplashActivity : com.maibaapp.base.base.BaseViewBindActivity<ActivitySplashBinding>() {
     override val isCanShowAgreeDialog: Boolean
         get() = true
     private val permissions = mutableListOf(
@@ -25,8 +21,8 @@ class SplashActivity : BaseViewBindActivity<ActivitySplashBinding>() {
         Manifest.permission.READ_EXTERNAL_STORAGE,
         Manifest.permission.READ_PHONE_STATE,
     )
-    override val agreementDialogClickCallback: AgreementDialogClickCallback?
-        get() = object : AgreementDialogClickCallback {
+    override val agreementDialogClickCallback: com.maibaapp.base.base.AgreementDialogClickCallback?
+        get() = object : com.maibaapp.base.base.AgreementDialogClickCallback {
             override fun onNegativeButtonClick(dialog: DialogInterface) {
                 super.onNegativeButtonClick(dialog)
                 finish()
@@ -34,7 +30,7 @@ class SplashActivity : BaseViewBindActivity<ActivitySplashBinding>() {
 
             override fun onPositiveButtonClick(dialog: DialogInterface) {
                 super.onPositiveButtonClick(dialog)
-                EventBus.postDelay<Boolean>(EventBusKey.INIT_LIBS, true)
+                com.maibaapp.base.event.EventBus.postDelay<Boolean>(EventBusKey.INIT_LIBS, true)
                 checkPermissions()
             }
 
@@ -55,7 +51,7 @@ class SplashActivity : BaseViewBindActivity<ActivitySplashBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (!MMKV.default().getBoolean(MMKV.isShowAgreeDialog, true)) {
+        if (!com.maibaapp.base.config.MMKV.default().getBoolean(com.maibaapp.base.config.MMKV.isShowAgreeDialog, true)) {
             checkPermissions()
         }
     }
@@ -70,7 +66,7 @@ class SplashActivity : BaseViewBindActivity<ActivitySplashBinding>() {
             startActivity(MainActivity::class.java)
             finish()
         }
-        EventBus.postDelay<Boolean>(EventBusKey.INIT_LIBS_AFTER_PERMISSION, true)
+        com.maibaapp.base.event.EventBus.postDelay<Boolean>(EventBusKey.INIT_LIBS_AFTER_PERMISSION, true)
     }
 
     private fun checkPermissions() {

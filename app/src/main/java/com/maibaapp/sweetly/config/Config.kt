@@ -11,6 +11,6 @@ package com.maibaapp.sweetly.config
 object Config {
 
      val UserConfig by lazy {
-         com.maibaapp.sweetly.base.config.MMKV.mmkvWithID("user")
+         com.maibaapp.base.config.MMKV.mmkvWithID("user")
      }
 }

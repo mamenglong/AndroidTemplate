@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.maibaapp.com.mml.android.sweetly", appContext.packageName)
+        assertEquals("com.maibaapp.com.maibaapp.android.sweetly", appContext.packageName)
     }
 }

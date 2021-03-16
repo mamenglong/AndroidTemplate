@@ -10,13 +10,12 @@ import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.FrameLayout
-import com.maibaapp.sweetly.base.base.BaseViewBindActivity
 import com.maibaapp.sweetly.databinding.ActivityCommonWebBinding
-import com.maibaapp.sweetly.log.LogUtil
+import com.maibaapp.base.log.LogUtil
 import com.maibaapp.sweetly.util.Utils
 import com.maibaapp.sweetly.util.startActivitySafely
 
-class CommonWebActivity : BaseViewBindActivity<ActivityCommonWebBinding>() {
+class CommonWebActivity : com.maibaapp.base.base.BaseViewBindActivity<ActivityCommonWebBinding>() {
     companion object {
         private const val PARAM_URL = "param_url"
         private const val PARAM_TITLE = "param_title"

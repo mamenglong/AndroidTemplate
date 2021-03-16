@@ -3,15 +3,15 @@ package com.maibaapp.sweetly.ui
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.maibaapp.sweetly.R
-import com.maibaapp.sweetly.base.base.BaseViewBindActivity
+import com.maibaapp.base.base.BaseViewBindActivity
 import com.maibaapp.sweetly.databinding.ActivityMainBinding
-import com.maibaapp.sweetly.log.LogUtil
+import com.maibaapp.base.log.LogUtil
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : BaseViewBindActivity<ActivityMainBinding>() {
+class MainActivity : com.maibaapp.base.base.BaseViewBindActivity<ActivityMainBinding>() {
     companion object{
-        const val MAIN_ACTION = "com.maibaapp.com.mml.android.sweetly.action.MAIN"
+        const val MAIN_ACTION = "com.maibaapp.com.maibaapp.android.sweetly.action.MAIN"
     }
     private lateinit var navController: NavController
     override fun getViewBinding(): ActivityMainBinding {
