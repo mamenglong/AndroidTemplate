@@ -57,7 +57,7 @@
 -keepclassmembers class * {
    public <init>(org.json.JSONObject);
 }
--keep public class com.maibaapp.sweetly.R$*{
+-keep public class com.mml.sweetly.R$*{
 public static final int *;
 }
 -keep class com.umeng.** {*;}

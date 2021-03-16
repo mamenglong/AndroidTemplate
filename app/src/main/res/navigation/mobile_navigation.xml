@@ -6,7 +6,7 @@
     app:startDestination="@+id/mainFragment">
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.maibaapp.sweetly.ui.main.MainFragment"
+        android:name="com.mml.template.ui.main.MainFragment"
         android:label="主页"
         tools:layout="@layout/fragment_main" />
     <action
@@ -18,7 +18,7 @@
         app:popExitAnim="@anim/slide_out_right" />
     <activity
         android:id="@+id/navContainerActivity"
-        android:name="com.maibaapp.sweetly.ui.ContainerActivity"
+        android:name="com.mml.template.ui.ContainerActivity"
         android:label="ContainerActivity"
         tools:layout="@layout/activity_container">
         <argument

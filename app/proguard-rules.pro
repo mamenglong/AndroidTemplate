@@ -189,7 +189,7 @@
 }
 #在app中与HTML5的JavaScript的交互进行特殊处理
 #我们需要确保这些js要调用的原生方法不能够被混淆，于是我们需要做如下处理：
--keepclassmembers class com.maibaapp.sweetly.JSInterface {
+-keepclassmembers class com.mml.template.JSInterface {
     <methods>;
 }
 
@@ -212,7 +212,7 @@
 -keepclassmembers class * {
    public <init>(org.json.JSONObject);
 }
--keep public class com.maibaapp.sweetly.R$*{
+-keep public class com.mml.template.R$*{
 public static final int *;
 }
 -keep class com.umeng.** {*;}
@@ -383,7 +383,7 @@ public static final int *;
 
 
 #bean
--keep class com.maibaapp.sweetly.bean.**{*;}
+-keep class com.mml.template.bean.**{*;}
 
 
 
