@@ -33,6 +33,16 @@ fun Boolean.yes(block:()->Unit):Boolean{
     }
     return this
 }
+fun debug(block: () ->Unit) {
+    if (BuildConfig.DEBUG){
+        block.invoke()
+    }
+}
+fun release(block: () ->Unit) {
+    if (!BuildConfig.DEBUG){
+        block.invoke()
+    }
+}
 fun Boolean.no(block:()->Unit):Boolean{
     if (!this){
         block()
